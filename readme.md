@@ -1,4 +1,4 @@
-# Personal Portfolio Context: [Adınız Soyadınız]
+# Personal Portfolio Context: [İsa Altunoğlu]
 
 ## 👨‍💻 Hakkımda (About Me)
 Ben Karabük Üniversitesi Bilgisayar Mühendisliği (%100 İngilizce) 2. sınıf öğrencisiyim. Güncel GANO'm **3.53**. 
@@ -57,15 +57,3 @@ Sıradan bir öğrenciden farklı olarak, sadece ders notlarına odaklanmak yeri
 * **Sınıf:** 2. Sınıf
 * **GANO:** 3.53
 * **Öne Çıkan Özellik:** Yüksek akademik başarı ile pratik saha tecrübesinin birleşimi.
-
-
-
-* **Önemli Sertifikalar:**
-    * **Go ile Programlamaya Giriş** (BTK Akademi) {}
-    * **Intermediate Machine Learning** (Kaggle) {}
-    * **Intro to Machine Learning** (Kaggle) {}
-    * **Pandas for Data Analysis** (Kaggle) {}
-    * **Proje Yönetimi Temelleri** (Google) {}
-    * **Siber Güvenliğe Giriş** (BTK Akademi) {}
-    * **Uygulamalı Figma**
-    * **Oyun ve Uygulama Akademisi Katılımları** (Flutter, Teknoloji Girişimciliği) {}
