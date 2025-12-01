@@ -1,42 +1,50 @@
 export default function Projects() {
   const projects = [
     {
-      title: "Industrial Automation Backend System",
+      title: "Agricultural Disease Detection (TÜBİTAK Project)",
       description:
-        "Developed with a team at Karabük Iron and Steel Institute. High-performance automation system tracking factory workers' efficiency and processes in real-time.",
-      tech: ["Go (Golang)", "REST API", "Database Management", "Real-time Processing"],
-      role: "Backend Developer",
-      details: "Writing high-performance data processing modules for industrial use",
-      icon: "🏭",
-      featured: true,
-    },
-    {
-      title: "Post-Earthquake Search & Rescue Drone",
-      description:
-        "Autonomous drone system detecting survivors under or around debris by processing camera images in real-time with advanced computer vision algorithms.",
-      tech: ["Embedded Systems", "OpenCV", "Drone Controller", "Real-time Detection", "Arduino"],
-      role: "Embedded Software & CV Engineer",
-      details: "Developing flight control and real-time image processing pipeline",
-      icon: "🚁",
-      featured: true,
-    },
-    {
-      title: "Agricultural Disease Detection (TÜBİTAK)",
-      description:
-        "AI-powered system providing early diagnosis of plant diseases using advanced image processing and machine learning techniques.",
-      tech: ["Python", "OpenCV", "Image Processing", "Machine Learning"],
-      role: "Researcher & Developer",
-      details: "Setting up complete image processing and ML pipeline",
+        "Developing an AI system to detect plant diseases using PyTorch and EfficientNet-B0 architecture. Curating and labeling a proprietary dataset from real-world agricultural fields to ensure high model accuracy.",
+      tech: ["PyTorch", "EfficientNet-B0", "OpenCV", "Image Preprocessing", "Deep Learning"],
+      role: "AI Researcher & Developer",
+      details: "Applied advanced image preprocessing techniques with OpenCV to optimize training data quality",
       icon: "🌱",
+      image: "/images/projects/agricultural.jpeg",
+      date: "Oct. 2025 – Present",
+      featured: true,
+    },
+    {
+      title: "Full-Stack Web Projects",
+      description:
+        "Developing two distinct web applications within a 2-person software team using Agile methodologies. Utilizing Firebase for backend authentication and real-time database services.",
+      tech: ["Next.js", "React", "Firebase", "Agile", "State Management"],
+      role: "Full-Stack Developer",
+      details: "Implemented responsive UI components with React/Next.js and managed state effectively",
+      icon: "🌐",
+      image: "/images/projects/nextjreactproje.png",
+      date: "Oct. 2025 – Present",
+      featured: true,
+    },
+    {
+      title: "Drone Control Station Software",
+      description:
+        "Customized QGroundControl open-source software using Qt Creator for a specialized rescue drone. Developed custom plugins in C++ to adapt the interface for earthquake survivor detection missions.",
+      tech: ["Qt Creator", "C++", "QGroundControl", "Embedded Systems", "Plugin Development"],
+      role: "Embedded Software Engineer",
+      details: "Customized drone control interface for specialized rescue operations",
+      icon: "🛸",
+      image: null,
+      date: "June 2025 – Aug. 2025",
       featured: false,
     },
     {
-      title: "GameJam 2D Game Project",
-      description: "Collaborative 2D game developed with a 4-person team under strict time constraints, showcasing rapid prototyping and teamwork skills.",
-      tech: ["Godot Engine", "GDScript", "Game Design"],
+      title: "2D Arcade Game (GameJam)",
+      description: "Developed a fully functional 2D arcade game in a team of 4 within a 48-hour deadline. Resolved complex Git merge conflicts and managed version control workflows for the team.",
+      tech: ["Godot Engine", "Git", "GDScript", "Game Physics"],
       role: "Game Mechanics Developer",
-      details: "Team coordination and core game loop implementation",
+      details: "Engineered core game mechanics and physics logic using Godot Engine",
       icon: "🎮",
+      image: "/images/projects/game3.png",
+      date: "Oct. 2025",
       featured: false,
     },
   ];
@@ -55,26 +63,44 @@ export default function Projects() {
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className={`group border border-white/10 hover:border-red-600/50 bg-zinc-950 p-8 md:p-10 transition-all duration-300 ${ 
+              className={`group border border-white/10 hover:border-red-600/50 bg-zinc-950 overflow-hidden transition-all duration-300 ${ 
                 project.featured ? 'hover:shadow-2xl hover:shadow-red-600/10' : 'hover:shadow-xl hover:shadow-red-600/5'
               }`}
             >
-              <div className="flex flex-col md:flex-row gap-8">
-                <div className="flex-shrink-0">
-                  <div className="text-6xl md:text-7xl">{project.icon}</div>
-                  {project.featured && (
-                    <div className="mt-4 inline-block">
+              <div className={project.image ? "grid md:grid-cols-2 gap-0" : "grid grid-cols-1 gap-0"}>
+                {/* Project Image - only show if image exists */}
+                {project.image && (
+                  <div className="relative h-64 md:h-auto bg-black overflow-hidden">
+                    <img 
+                      src={project.image || ''} 
+                      alt={project.title}
+                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
+                    {project.featured && (
+                      <div className="absolute top-4 left-4">
+                        <span className="text-xs text-red-600 font-bold uppercase tracking-wider border border-red-600/50 px-3 py-1 bg-black/80 backdrop-blur-sm">
+                          Featured
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                )}
+                
+                {/* Project Details */}
+                <div className="p-8 md:p-10 flex flex-col justify-center">
+                  <div className="text-4xl mb-4">{project.icon}</div>
+                  {!project.image && project.featured && (
+                    <div className="mb-4 inline-block w-fit">
                       <span className="text-xs text-red-600 font-bold uppercase tracking-wider border border-red-600/30 px-3 py-1 bg-red-600/10">
                         Featured
                       </span>
                     </div>
                   )}
-                </div>
-                
-                <div className="flex-1">
                   <h3 className="text-3xl font-bold text-white mb-3 group-hover:text-red-600 transition-colors">
                     {project.title}
                   </h3>
+                  <p className="text-sm text-red-600 font-semibold mb-3">{project.date}</p>
                   <p className="text-gray-300 text-lg mb-4 leading-relaxed">
                     {project.description}
                   </p>
