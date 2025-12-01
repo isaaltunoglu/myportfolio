@@ -15,36 +15,36 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-black/90 backdrop-blur-md border-red-600/20" 
-          : "bg-transparent border-transparent"
+          ? "bg-white/95 backdrop-blur-md shadow-md" 
+          : "bg-white/80 backdrop-blur-sm"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-red-600 flex items-center justify-center">
-              <span className="text-white font-bold text-xl">İA</span>
+            <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">İA</span>
             </div>
-            <span className="text-xl font-bold text-white tracking-wider">İsa Altunoğlu</span>
+            <span className="text-lg font-bold text-gray-900">İsa Altunoğlu</span>
           </div>
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              <a href="#about" className="text-gray-400 hover:text-red-600 transition-colors font-medium uppercase text-sm tracking-wide">
+            <div className="ml-10 flex items-baseline space-x-6">
+              <a href="#about" className="text-gray-700 hover:text-purple-600 transition-colors font-medium text-sm">
                 About
               </a>
-              <a href="#tech" className="text-gray-400 hover:text-red-600 transition-colors font-medium uppercase text-sm tracking-wide">
-                Expertise
+              <a href="#tech" className="text-gray-700 hover:text-purple-600 transition-colors font-medium text-sm">
+                Skills
               </a>
-              <a href="#projects" className="text-gray-400 hover:text-red-600 transition-colors font-medium uppercase text-sm tracking-wide">
+              <a href="#projects" className="text-gray-700 hover:text-purple-600 transition-colors font-medium text-sm">
                 Projects
               </a>
-              <a href="#certificates" className="text-gray-400 hover:text-red-600 transition-colors font-medium uppercase text-sm tracking-wide">
+              <a href="#certificates" className="text-gray-700 hover:text-purple-600 transition-colors font-medium text-sm">
                 Certificates
               </a>
-              <a href="#education" className="text-gray-400 hover:text-red-600 transition-colors font-medium uppercase text-sm tracking-wide">
-                Education
+              <a href="#education" className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-medium text-sm hover:shadow-lg transition">
+                Contact
               </a>
             </div>
           </div>

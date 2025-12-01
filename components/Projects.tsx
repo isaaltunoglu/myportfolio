@@ -3,134 +3,96 @@ import Image from "next/image";
 export default function Projects() {
   const projects = [
     {
-      title: "Agricultural Disease Detection (TÜBİTAK Project)",
+      title: "Agricultural Disease Detection",
       description:
-        "Developing an AI system to detect plant diseases using PyTorch and EfficientNet-B0 architecture. Curating and labeling a proprietary dataset from real-world agricultural fields to ensure high model accuracy.",
-      tech: ["PyTorch", "EfficientNet-B0", "OpenCV", "Image Preprocessing", "Deep Learning"],
-      role: "AI Researcher & Developer",
-      details: "Applied advanced image preprocessing techniques with OpenCV to optimize training data quality",
-      icon: "🌱",
+        "AI system detecting plant diseases using PyTorch and EfficientNet-B0. Building a proprietary dataset from real agricultural fields.",
+      tech: ["PyTorch", "OpenCV", "Deep Learning"],
       image: "/images/projects/agricultural.jpeg",
       date: "Oct. 2025 – Present",
-      featured: true,
+      gradient: "from-green-500 to-emerald-600",
     },
     {
       title: "Full-Stack Web Projects",
       description:
-        "Developing two distinct web applications within a 2-person software team using Agile methodologies. Utilizing Firebase for backend authentication and real-time database services.",
-      tech: ["Next.js", "React", "Firebase", "Agile", "State Management"],
-      role: "Full-Stack Developer",
-      details: "Implemented responsive UI components with React/Next.js and managed state effectively",
-      icon: "🌐",
+        "Two web applications built with Next.js and Firebase. Working in an Agile team environment.",
+      tech: ["Next.js", "React", "Firebase"],
       image: "/images/projects/nextjreactproje.png",
       date: "Oct. 2025 – Present",
-      featured: true,
+      gradient: "from-blue-500 to-cyan-600",
     },
     {
-      title: "Drone Control Station Software",
+      title: "Drone Control Station",
       description:
-        "Customized QGroundControl open-source software using Qt Creator for a specialized rescue drone. Developed custom plugins in C++ to adapt the interface for earthquake survivor detection missions.",
-      tech: ["Qt Creator", "C++", "QGroundControl", "Embedded Systems", "Plugin Development"],
-      role: "Embedded Software Engineer",
-      details: "Customized drone control interface for specialized rescue operations",
-      icon: "🛸",
+        "Customized QGroundControl for rescue drones. Built C++ plugins for earthquake survivor detection.",
+      tech: ["Qt Creator", "C++", "Embedded Systems"],
       image: null,
       date: "June 2025 – Aug. 2025",
-      featured: false,
+      gradient: "from-purple-500 to-pink-600",
     },
     {
       title: "2D Arcade Game (GameJam)",
-      description: "Developed a fully functional 2D arcade game in a team of 4 within a 48-hour deadline. Resolved complex Git merge conflicts and managed version control workflows for the team.",
-      tech: ["Godot Engine", "Git", "GDScript", "Game Physics"],
-      role: "Game Mechanics Developer",
-      details: "Engineered core game mechanics and physics logic using Godot Engine",
-      icon: "🎮",
+      description: "Full game developed in 48 hours with a team of 4. Handled Git workflows and game mechanics.",
+      tech: ["Godot Engine", "GDScript"],
       image: "/images/projects/game3.png",
       date: "Oct. 2025",
-      featured: false,
+      gradient: "from-orange-500 to-red-600",
     },
   ];
 
   return (
-    <section id="projects" className="py-24 px-4 bg-black border-t border-white/5">
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-16">
-          <span className="text-red-600 font-bold text-sm uppercase tracking-widest">Portfolio</span>
-          <h2 className="text-5xl md:text-6xl font-bold mt-4 text-white">
-            Featured Projects
+    <section id="projects" className="py-24 px-4 bg-white">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Recent projects
           </h2>
+          <p className="text-xl text-gray-600">
+            Real-world solutions that actually work
+          </p>
         </div>
         
-        <div className="space-y-6">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className={`group border border-white/10 hover:border-red-600/50 bg-zinc-950 overflow-hidden transition-all duration-300 ${ 
-                project.featured ? 'hover:shadow-2xl hover:shadow-red-600/10' : 'hover:shadow-xl hover:shadow-red-600/5'
-              }`}
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
             >
-              <div className={project.image ? "grid md:grid-cols-2 gap-0" : "grid grid-cols-1 gap-0"}>
-                {/* Project Image - only show if image exists */}
-                {project.image && (
-                  <div className="relative h-64 md:h-auto bg-black overflow-hidden">
-                    <Image 
-                      src={project.image || ''} 
-                      alt={project.title}
-                      fill
-                      className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
-                    {project.featured && (
-                      <div className="absolute top-4 left-4">
-                        <span className="text-xs text-red-600 font-bold uppercase tracking-wider border border-red-600/50 px-3 py-1 bg-black/80 backdrop-blur-sm">
-                          Featured
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                )}
+              {project.image && (
+                <div className="relative h-48 overflow-hidden">
+                  <Image 
+                    src={project.image} 
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20 group-hover:opacity-30 transition-opacity`}></div>
+                </div>
+              )}
+              
+              {!project.image && (
+                <div className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center`}>
+                  <div className="text-6xl">🚀</div>
+                </div>
+              )}
+              
+              <div className="p-6">
+                <p className="text-sm text-gray-500 mb-2">{project.date}</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {project.description}
+                </p>
                 
-                {/* Project Details */}
-                <div className="p-8 md:p-10 flex flex-col justify-center">
-                  <div className="text-4xl mb-4">{project.icon}</div>
-                  {!project.image && project.featured && (
-                    <div className="mb-4 inline-block w-fit">
-                      <span className="text-xs text-red-600 font-bold uppercase tracking-wider border border-red-600/30 px-3 py-1 bg-red-600/10">
-                        Featured
-                      </span>
-                    </div>
-                  )}
-                  <h3 className="text-3xl font-bold text-white mb-3 group-hover:text-red-600 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-red-600 font-semibold mb-3">{project.date}</p>
-                  <p className="text-gray-300 text-lg mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  
-                  <div className="mb-6">
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech, tidx) => (
-                        <span
-                          key={tidx}
-                          className="px-4 py-2 bg-white/5 border border-white/10 text-gray-300 text-sm font-medium hover:border-red-600/50 transition-colors"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div className="border-t border-white/10 pt-4 grid md:grid-cols-2 gap-4">
-                    <div>
-                      <h4 className="text-xs text-gray-500 uppercase tracking-wider mb-1">Role</h4>
-                      <p className="text-white font-semibold">{project.role}</p>
-                    </div>
-                    <div>
-                      <h4 className="text-xs text-gray-500 uppercase tracking-wider mb-1">Contribution</h4>
-                      <p className="text-gray-400">{project.details}</p>
-                    </div>
-                  </div>
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((tech, tidx) => (
+                    <span
+                      key={tidx}
+                      className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full font-medium"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>

@@ -1,110 +1,42 @@
 export default function TechStack() {
-  const techCategories = [
-    {
-      title: "Programming Languages",
-      icon: "💻",
-      skills: [
-        { name: "Python", level: "Advanced" },
-        { name: "Go (Golang)", level: "Advanced" },
-        { name: "Java", level: "Intermediate" },
-        { name: "C/C++", level: "Intermediate" },
-        { name: "JavaScript", level: "Intermediate" },
-      ],
-    },
-    {
-      title: "AI & Machine Learning",
-      icon: "🧠",
-      skills: [
-        { name: "OpenCV", level: "Advanced" },
-        { name: "PyTorch", level: "Advanced" },
-        { name: "TensorFlow", level: "Intermediate" },
-        { name: "Computer Vision", level: "Advanced" },
-      ],
-    },
-    {
-      title: "Frontend Development",
-      icon: "🎨",
-      skills: [
-        { name: "React", level: "Intermediate" },
-        { name: "Next.js", level: "Intermediate" },
-        { name: "JavaScript", level: "Intermediate" },
-        { name: "Tailwind CSS", level: "Intermediate" },
-      ],
-    },
-    {
-      title: "Backend & Systems",
-      icon: "⚡",
-      skills: [
-        { name: "Go Backend Services", level: "Advanced" },
-        { name: "Linux (Ubuntu)", level: "Advanced" },
-        { name: "Firebase", level: "Intermediate" },
-        { name: "REST APIs", level: "Advanced" },
-      ],
-    },
-    {
-      title: "Embedded Systems",
-      icon: "🛸",
-      skills: [
-        { name: "Arduino", level: "Advanced" },
-        { name: "C/C++ Embedded", level: "Advanced" },
-        { name: "Drone Technologies", level: "Advanced" },
-        { name: "Sensor Integration", level: "Advanced" },
-      ],
-    },
-    {
-      title: "Desktop & Game Dev",
-      icon: "🎮",
-      skills: [
-        { name: "Qt Framework", level: "Intermediate" },
-        { name: "Godot Engine", level: "Intermediate" },
-        { name: "Blender 3D", level: "Intermediate" },
-        { name: "Game Mechanics", level: "Intermediate" },
-      ],
-    },
-    {
-      title: "Version Control & Tools",
-      icon: "🔧",
-      skills: [
-        { name: "Git", level: "Advanced" },
-        { name: "GitHub", level: "Advanced" },
-        { name: "Linux Terminal", level: "Advanced" },
-        { name: "CI/CD", level: "Intermediate" },
-      ],
-    },
+  const skills = [
+    "Python", "Go", "Java", "C/C++", "JavaScript",
+    "PyTorch", "OpenCV", "TensorFlow",
+    "React", "Next.js", "Tailwind CSS",
+    "Firebase", "REST APIs", "Linux",
+    "Arduino", "Qt Framework", "Godot Engine",
+    "Git", "GitHub", "Blender 3D"
   ];
 
   return (
-    <section id="tech" className="py-24 px-4 bg-zinc-950 border-t border-white/5">
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-16">
-          <span className="text-red-600 font-bold text-sm uppercase tracking-widest">Technical Expertise</span>
-          <h2 className="text-5xl md:text-6xl font-bold mt-4 text-white">
-            Technology Stack
+    <section id="tech" className="py-24 px-4 bg-gray-50">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Tech I work with
           </h2>
+          <p className="text-xl text-gray-600">
+            Technology-agnostic. I use what works best for the problem.
+          </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {techCategories.map((category, idx) => (
-            <div
-              key={idx}
-              className="group bg-black border border-white/10 hover:border-red-600/50 p-8 transition-all duration-300 hover:shadow-xl hover:shadow-red-600/10"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="text-4xl">{category.icon}</div>
-                <h3 className="text-2xl font-bold text-white">{category.title}</h3>
-              </div>
-              <div className="space-y-4">
-                {category.skills.map((skill, sidx) => (
-                  <div key={sidx} className="flex justify-between items-center">
-                    <span className="text-gray-300">{skill.name}</span>
-                    <span className="text-xs text-red-600 font-semibold uppercase tracking-wider">
-                      {skill.level}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+        <div className="bg-white p-8 md:p-12 rounded-2xl shadow-lg">
+          <div className="flex flex-wrap gap-3 justify-center">
+            {skills.map((skill, idx) => (
+              <span
+                key={idx}
+                className="px-5 py-3 bg-gradient-to-r from-purple-50 to-blue-50 text-gray-800 rounded-lg font-medium border border-purple-200 hover:border-purple-400 hover:shadow-md transition-all"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+          
+          <div className="mt-12 pt-8 border-t border-gray-200 text-center">
+            <p className="text-gray-600 text-lg">
+              <strong className="text-purple-600">20+ certifications</strong> across Programming, AI/ML, Web Development, and Embedded Systems
+            </p>
+          </div>
         </div>
       </div>
     </section>
