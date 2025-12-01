@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Projects() {
   const projects = [
     {
@@ -71,10 +73,11 @@ export default function Projects() {
                 {/* Project Image - only show if image exists */}
                 {project.image && (
                   <div className="relative h-64 md:h-auto bg-black overflow-hidden">
-                    <img 
+                    <Image 
                       src={project.image || ''} 
                       alt={project.title}
-                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                      fill
+                      className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
                     {project.featured && (

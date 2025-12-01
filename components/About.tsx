@@ -12,12 +12,12 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12">
           <div className="space-y-6">
             <p className="text-xl text-gray-300 leading-relaxed">
-              I'm a 2nd year Computer Engineering student at Karabük University (100% English program) 
+              I&apos;m a 2nd year Computer Engineering student at Karabük University (100% English program) 
               with a <span className="text-red-600 font-semibold">GPA of 3.53</span>.
             </p>
             <p className="text-lg text-gray-400 leading-relaxed">
               Unlike typical students who focus solely on grades, I pursue a production-oriented career path. 
-              I'm a technology-agnostic engineer who chooses the best solution for each problem, 
+              I&apos;m a technology-agnostic engineer who chooses the best solution for each problem, 
               specializing in the intersection of Backend Development, AI, and Embedded Systems.
             </p>
             <p className="text-lg text-gray-400 leading-relaxed">
