@@ -2,7 +2,7 @@ export default function Certificates() {
   const certificates = [
     {
       category: "Programming Languages",
-      icon: "💻",
+      icon: "{ }",
       certs: [
         { name: "Python Programming", issuer: "Certified", color: "blue" },
         { name: "Go (Golang) Backend", issuer: "Certified", color: "cyan" },
@@ -12,7 +12,7 @@ export default function Certificates() {
     },
     {
       category: "AI & Machine Learning",
-      icon: "🤖",
+      icon: "◉",
       certs: [
         { name: "OpenCV Computer Vision", issuer: "Certified", color: "green" },
         { name: "PyTorch Deep Learning", issuer: "Certified", color: "red" },
@@ -21,7 +21,7 @@ export default function Certificates() {
     },
     {
       category: "Web Development",
-      icon: "🌐",
+      icon: "</>",
       certs: [
         { name: "React Framework", issuer: "Certified", color: "blue" },
         { name: "Next.js Development", issuer: "Certified", color: "black" },
@@ -31,7 +31,7 @@ export default function Certificates() {
     },
     {
       category: "Systems & Tools",
-      icon: "⚙️",
+      icon: "▣",
       certs: [
         { name: "Linux System Administration", issuer: "Certified", color: "gray" },
         { name: "Git & GitHub", issuer: "Certified", color: "black" },
@@ -40,7 +40,7 @@ export default function Certificates() {
     },
     {
       category: "Design & Game Dev",
-      icon: "🎨",
+      icon: "◈",
       certs: [
         { name: "Qt Framework Desktop Apps", issuer: "Certified", color: "green" },
         { name: "Godot Game Engine", issuer: "Certified", color: "blue" },
@@ -69,7 +69,7 @@ export default function Certificates() {
               className="group bg-zinc-950 border border-white/10 hover:border-red-600/50 p-8 transition-all duration-300 hover:shadow-xl hover:shadow-red-600/10"
             >
               <div className="flex items-center gap-4 mb-6">
-                <div className="text-5xl">{category.icon}</div>
+                <div className="text-5xl font-bold text-red-600">{category.icon}</div>
                 <h3 className="text-xl font-bold text-white">{category.category}</h3>
               </div>
               
