@@ -1,0 +1,52 @@
+Aşağıdaki bilgileri kopyalayıp prompt'un devamına ekleyin. Kaynaklardan derlenmiştir:
+A. KİŞİSEL BİLGİLER (Personal Information)
+• İsim: İsa Altunoğlu
+• Unvan: Computer Engineering Student | Production-Focused Engineer
+• Eğitim: Karabük Üniversitesi, Bilgisayar Mühendisliği (%100 İngilizce)
+• Akademik Başarı: 3.27 / 4.00 GPA
+• Konum: Karabük / Türkiye
+• İletişim: 52isaaltunoglu@gmail.com | +90 544 958 31 60
+• Sosyal Medya:
+    ◦ LinkedIn: linkedin.com/in/isa-altunoglu
+    ◦ GitHub: github.com/isaaltunoglu
+• Motto: "I don't just write code, I build solutions. Technology-agnostic approach."
+B. HAKKIMDA (About Me)
+"I am a 2nd-year Computer Engineering student who builds real-world AI systems, backend services, and embedded solutions. While most students focus solely on theory, I focus on production. I define myself as technology-agnostic; whether it is Go for backend automation, PyTorch for AI, or C++ for drone systems, I use the best tool for the problem. My goal is to bridge the gap between academic research and industrial application."
+C. İŞ & GÖNÜLLÜ DENEYİM (Experience)
+1. Volunteer Backend Developer | KARDEMİR (Karabük Iron and Steel Institute)
+• Tech Stack: Go (Golang), REST APIs, Postman.
+• Description: Architected and developed a backend automation system to track worker operations. Designed high-performance REST APIs and collaborated with cross-functional teams to integrate services with frontend interfaces.
+2. Project Manager & Technical Lead | Hicaz Hyperloop Team (Teknofest)
+• Description: Managed a multidisciplinary engineering team, engineered communication protocols, and developed GUI systems for vehicle telemetry.
+D. ÖNE ÇIKAN PROJELER (Featured Projects)
+(Bu projeler kaynaklardaki TÜBİTAK başvuruları ve GitHub verilerinden derlenmiştir)
+1. Frost Risk Prediction System (TÜBİTAK 2209-A Funded)
+• Role: Project Lead
+• Tech: IoT (ESP32), Python, LSTM (Deep Learning), Sensors (BME280).
+• Detail: Developing a hybrid Early Warning System for agricultural frost. The system calculates "Wet Bulb Temperature" on the device (embedded) and uses an LSTM model to predict frost risk 3 hours in advance using micro-climate data.
+2. Agricultural Disease Detection (AI Research)
+• Role: AI Researcher
+• Tech: PyTorch, EfficientNet-B0, OpenCV.
+• Detail: Creating an AI system to detect plant diseases. Curating and labeling a proprietary dataset from real-world agricultural fields to ensure high model accuracy compared to standard datasets.
+3. Drone Control Station Software
+• Role: Embedded Software Developer
+• Tech: C++, Qt Creator, QGroundControl.
+• Detail: Customized the open-source QGroundControl software for a search-and-rescue drone. Developed custom C++ plugins to adapt the interface specifically for earthquake survivor detection missions.
+4. Hydroponic Agriculture System
+• Role: Software & IoT Developer
+• Tech: Raspberry Pi, Arduino, Deep Learning.
+• Detail: Engineered the software architecture for an automated nutrient control system. Integrated Deep Learning models into the embedded loop for real-time plant health monitoring.
+5. 2D Arcade Game (GameJam)
+• Role: Game Developer
+• Tech: Godot Engine, Git.
+• Detail: Developed a fully functional game within a 48-hour deadline in a 4-person team. Managed complex Git merge conflicts and implemented core physics logic.
+6. Full-Stack Web Applications
+• Tech: Next.js, React, Firebase.
+• Detail: Developed responsive web applications using Agile methodologies, utilizing Firebase for real-time databases and authentication.
+E. TEKNİK YETENEKLER (Technical Skills)
+(Kaynaklardan sınıflandırılmıştır)
+• Programming Languages: Python, Go (Golang), C, C++, Java, JavaScript, Dart.
+• AI & Data Science: PyTorch, TensorFlow, Keras, LSTM, EfficientNet, OpenCV, Pandas.
+• Backend & Web: Next.js, React, Firebase, REST APIs, Flutter.
+• Embedded & Tools: ESP32, Raspberry Pi, Arduino, Docker, Git/GitHub, Linux, Postman, Qt Creator, QGroundControl.
+• Design: Blender (3D Modeling).

@@ -11,6 +11,19 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        neon: {
+          blue: "#00f3ff",
+          purple: "#bc13fe",
+          green: "#0aff0a",
+        },
+      },
+      fontFamily: {
+        mono: ["var(--font-geist-mono)", "monospace"],
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
