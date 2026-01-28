@@ -17,7 +17,7 @@ const PORTFOLIO_DATA = {
     {
       id: 1,
       title: "Hicaz Hyperloop Team",
-      description: "Managed a multidisciplinary engineering team, engineered communication protocols, and developed GUI systems for vehicle telemetry as Project Lead.",
+      description: "Engineered critical communication protocols and developed real-time GUI systems for vehicle telemetry within the Avionics & Software team. Implemented sensor fusion algorithms to visualize 'Digital Twin' status and battery thermal limits",
       stack: ["Project Management", "Vehicle Telemetry", "GUI Systems"],
       featured: true,
       has3D: false,
